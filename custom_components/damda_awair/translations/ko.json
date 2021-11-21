@@ -1,0 +1,20 @@
+{
+  "title": "\uB2F4\uB2E4 \uC5B4\uC6E8\uC5B4",
+  "config": {
+    "abort": {
+        "not_ip_address": "{ip} is not IP address.",
+        "already_configured": "\uAC19\uC740 \uC815\uBCF4\uB97C \uAC00\uC9C4 \uAD6C\uC131\uC694\uC18C\uAC00 \uC774\uBBF8 \uC788\uC2B5\uB2C8\uB2E4. "
+    },
+    "step": {
+        "confirm": {
+            "description": "\uB2F4\uB2E4 \uC5B4\uC6E8\uC5B4 \uB97C \uC124\uCE58\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+        },
+        "user": {
+            "description": "\uB2F4\uB2E4 \uC5B4\uC6E8\uC5B4\uB97C \uC124\uCE58\uD569\uB2C8\uB2E4."
+        },
+        "add_awair": {
+          "description": "\uB2F4\uB2E4 \uC5B4\uC6E8\uC5B4\uB97C \uC124\uCE58\uD569\uB2C8\uB2E4."
+        }
+    }
+  }
+}

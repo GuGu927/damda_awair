@@ -1,0 +1,20 @@
+{
+  "domain": "damda_awair",
+  "name": "Damda Awair",
+  "config_flow": true,
+  "documentation": "https://cafe.naver.com/koreassistant",
+  "requirements": [],
+  "ssdp": [],
+  "zeroconf": [{ "type": "_http._tcp.local.", "name": "awair*" }],
+  "dhcp": [
+    {
+      "hostname": "awair*",
+      "macaddress": "70886B*"
+    }
+  ],
+  "homekit": {},
+  "dependencies": [],
+  "codeowners": ["@GuGu927"],
+  "iot_class": "local_polling",
+  "version": "1.0.0"
+}
