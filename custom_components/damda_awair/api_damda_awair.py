@@ -105,9 +105,8 @@ class DamdaAwairAPI:
     def set_entry(self, entry):
         """Set entry."""
         self.entry = entry
-        self.awair_list = self.set_data(
-            "awair_list", self.awair_list + self.get_data("awair_list", [])
-        )
+        awair_list = self.awair_list + self.get_data("awair_list", [])
+        self.awair_list = self.set_data("awair_list", list(dict.fromkeys(awair_list)))
 
     async def get_setting(self, ip):
         """Get device setting."""
