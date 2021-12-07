@@ -20,12 +20,12 @@ from homeassistant.const import (
 
 # from homeassistant.const import DEVICE_CLASS_TIMESTAMP
 
-VERSION = "1.0.0"
+VERSION = "1.2.1"
 BRAND = "Damda"
 NAME = "Damda Awair"
 NAME_KOR = "담다 어웨어"
 DOMAIN = "damda_awair"
-MODEL = "dd_aw"
+MODEL = "damda_awair"
 MANUFACTURER = "Awair"
 API_NAME = DOMAIN + "_api"
 API_DEVICE = DOMAIN + "_device"

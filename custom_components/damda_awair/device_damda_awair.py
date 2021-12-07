@@ -65,8 +65,8 @@ class DAwairBase:
                 )
             },
             "identifiers": {(DOMAIN, self.device_uuid)},
-            "manufacturer": f"{self.api.brand}",
-            "model": f"{self.api.model}_{self.api.version}",
+            "manufacturer": self.api.manufacturer,
+            "model": self.api.model,
             "name": self.device_uuid,
             "sw_version": self.api.version,
             "via_device": (DOMAIN, self.device_uuid),
