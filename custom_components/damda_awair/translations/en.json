@@ -2,9 +2,9 @@
   "title": "Damda Awair",
   "config": {
     "abort": {
-        "not_ip_address": "{ip} is not IP address.",
-        "no_devices_found": "No devices found on the network",
-        "single_instance_allowed": "Already configured. Only a single configuration possible."
+        "discovery_complete": "Damda Awair discovery complete.",
+        "add_complete": "Add {ip} device.",
+        "not_ip_address": "{ip} is not IP address."
     },
     "step": {
         "confirm": {

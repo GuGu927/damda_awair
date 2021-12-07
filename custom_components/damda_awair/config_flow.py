@@ -61,20 +61,22 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             )
         ip = user_input.get(CONF_IP_ADDRESS)
         if not is_ip(ip):
-            self.async_abort(
+            return self.async_abort(
                 reason="not_ip_address", description_placeholders={"ip": ip}
             )
         await self.get_awair(ip, True)
-        await self.async_set_unique_id(DOMAIN)
-        self._abort_if_unique_id_configured()
+        unique_id = await self.async_set_unique_id(DOMAIN)
+        if unique_id is not None:
+            return self.async_abort(
+                reason="add_complete", description_placeholders={"ip": ip}
+            )
         return self.async_create_entry(title=NAME_KOR, data={})
 
     async def async_step_add_awair(self, user_input=None):
         """Handle the initial step."""
-        await self.async_set_unique_id(DOMAIN)
-        self._abort_if_unique_id_configured()
-        if user_input is None:
-            return self.async_show_form(step_id="add_awair", errors={})
+        unique_id = await self.async_set_unique_id(DOMAIN)
+        if unique_id is not None:
+            return self.async_abort(reason="discovery_complete")
         return self.async_create_entry(title=NAME_KOR, data={})
 
     async def async_step_zeroconf(self, discovery_info: DiscoveryInfoType):
