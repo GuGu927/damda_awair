@@ -20,7 +20,7 @@ from homeassistant.const import (
 
 # from homeassistant.const import DEVICE_CLASS_TIMESTAMP
 
-VERSION = "1.2.1"
+VERSION = "1.2.2"
 BRAND = "Damda"
 NAME = "Damda Awair"
 NAME_KOR = "담다 어웨어"
