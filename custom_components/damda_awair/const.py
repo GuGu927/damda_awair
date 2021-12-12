@@ -1,26 +1,17 @@
 """Constants for the Damda Wair integration."""
 from homeassistant.components.sensor import DOMAIN as SENSOR_DOMAIN
+from homeassistant.components.sensor import SensorDeviceClass
 from homeassistant.const import (
     CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
     CONCENTRATION_PARTS_PER_BILLION,
     CONCENTRATION_PARTS_PER_MILLION,
-    DEVICE_CLASS_CO2,
-    DEVICE_CLASS_HUMIDITY,
-    DEVICE_CLASS_ILLUMINANCE,
-    DEVICE_CLASS_PM10,
-    DEVICE_CLASS_PM25,
-    DEVICE_CLASS_TEMPERATURE,
-    DEVICE_CLASS_TIMESTAMP,
-    DEVICE_CLASS_VOLATILE_ORGANIC_COMPOUNDS,
     LIGHT_LUX,
     PERCENTAGE,
     TEMP_CELSIUS,
     SOUND_PRESSURE_WEIGHTED_DBA,
 )
 
-# from homeassistant.const import DEVICE_CLASS_TIMESTAMP
-
-VERSION = "1.2.2"
+VERSION = "1.2.3"
 BRAND = "Damda"
 NAME = "Damda Awair"
 NAME_KOR = "담다 어웨어"
@@ -130,7 +121,7 @@ AWAIR_ITEM = {
         TEMP_CELSIUS,
         SENSOR_DOMAIN,
         "mdi:thermometer",
-        DEVICE_CLASS_TEMPERATURE,
+        SensorDeviceClass.TEMPERATURE,
         float,
     ],
     "humid": [
@@ -139,7 +130,7 @@ AWAIR_ITEM = {
         PERCENTAGE,
         SENSOR_DOMAIN,
         "mdi:water-percent",
-        DEVICE_CLASS_HUMIDITY,
+        SensorDeviceClass.HUMIDITY,
         float,
     ],
     "co2": [
@@ -148,7 +139,7 @@ AWAIR_ITEM = {
         CONCENTRATION_PARTS_PER_MILLION,
         SENSOR_DOMAIN,
         "mdi:molecule-co2",
-        DEVICE_CLASS_CO2,
+        SensorDeviceClass.CO2,
         int,
     ],
     "voc": [
@@ -157,7 +148,7 @@ AWAIR_ITEM = {
         CONCENTRATION_PARTS_PER_BILLION,
         SENSOR_DOMAIN,
         "mdi:chemical-weapon",
-        DEVICE_CLASS_VOLATILE_ORGANIC_COMPOUNDS,
+        SensorDeviceClass.VOLATILE_ORGANIC_COMPOUNDS,
         int,
     ],
     "pm25": [
@@ -166,7 +157,7 @@ AWAIR_ITEM = {
         CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
         SENSOR_DOMAIN,
         "mdi:blur",
-        DEVICE_CLASS_PM25,
+        SensorDeviceClass.PM25,
         int,
     ],
     "lux": [
@@ -175,7 +166,7 @@ AWAIR_ITEM = {
         LIGHT_LUX,
         SENSOR_DOMAIN,
         "mdi:weather-sunny",
-        DEVICE_CLASS_ILLUMINANCE,
+        SensorDeviceClass.ILLUMINANCE,
         int,
     ],
     "spl_a": [
@@ -193,7 +184,7 @@ AWAIR_ITEM = {
         None,
         SENSOR_DOMAIN,
         "mdi:clock-outline",
-        DEVICE_CLASS_TIMESTAMP,
+        SensorDeviceClass.TIMESTAMP,
         None,
     ],
     "dew_point": [
@@ -202,7 +193,7 @@ AWAIR_ITEM = {
         TEMP_CELSIUS,
         SENSOR_DOMAIN,
         "mdi:snowflake",
-        DEVICE_CLASS_TEMPERATURE,
+        SensorDeviceClass.TEMPERATURE,
         float,
     ],
     "abs_humid": [
@@ -211,7 +202,7 @@ AWAIR_ITEM = {
         "",
         SENSOR_DOMAIN,
         "mdi:water-percent",
-        DEVICE_CLASS_HUMIDITY,
+        SensorDeviceClass.HUMIDITY,
         float,
     ],
     "co2_est": [
@@ -220,7 +211,7 @@ AWAIR_ITEM = {
         CONCENTRATION_PARTS_PER_MILLION,
         SENSOR_DOMAIN,
         "mdi:molecule-co2",
-        DEVICE_CLASS_CO2,
+        SensorDeviceClass.CO2,
         int,
     ],
     "co2_est_baseline": [
@@ -229,7 +220,7 @@ AWAIR_ITEM = {
         "",
         SENSOR_DOMAIN,
         "mdi:molecule-co2",
-        DEVICE_CLASS_CO2,
+        SensorDeviceClass.CO2,
         int,
     ],
     "voc_baseline": [
@@ -238,7 +229,7 @@ AWAIR_ITEM = {
         "",
         SENSOR_DOMAIN,
         "mdi:chemical-weapon",
-        DEVICE_CLASS_VOLATILE_ORGANIC_COMPOUNDS,
+        SensorDeviceClass.VOLATILE_ORGANIC_COMPOUNDS,
         int,
     ],
     "voc_h2_raw": [
@@ -247,7 +238,7 @@ AWAIR_ITEM = {
         "",
         SENSOR_DOMAIN,
         "mdi:chemical-weapon",
-        DEVICE_CLASS_VOLATILE_ORGANIC_COMPOUNDS,
+        SensorDeviceClass.VOLATILE_ORGANIC_COMPOUNDS,
         int,
     ],
     "voc_ethanol_raw": [
@@ -256,7 +247,7 @@ AWAIR_ITEM = {
         "",
         SENSOR_DOMAIN,
         "mdi:chemical-weapon",
-        DEVICE_CLASS_VOLATILE_ORGANIC_COMPOUNDS,
+        SensorDeviceClass.VOLATILE_ORGANIC_COMPOUNDS,
         int,
     ],
     "pm10_est": [
@@ -265,7 +256,7 @@ AWAIR_ITEM = {
         CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
         SENSOR_DOMAIN,
         "mdi:blur",
-        DEVICE_CLASS_PM10,
+        SensorDeviceClass.PM10,
         int,
     ],
 }
