@@ -138,7 +138,7 @@ class DAwairDevice(DAwairBase, RestoreEntity):
         return False
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         """Return the state attributes of the sensor."""
         attr = self.api.get_state(self.unique_id, DEVICE_ATTR)
         return attr

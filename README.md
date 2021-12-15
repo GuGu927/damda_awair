@@ -27,6 +27,7 @@ Damda Awair Component
 | v1.2.1 | 2021.12.08 | 모델명 등 표시방법 수정                     |
 | v1.2.2 | 2021.12.11 | 히스토리 그래프 관련 수정                   |
 | v1.2.3 | 2021.12.12 | 2021.12 업데이트 대응                       |
+| v1.2.4 | 2021.12.15 | 2021.12 업데이트 대응2                      |
 
 <br/>
 
@@ -73,5 +74,5 @@ Damda Awair Component
 - 검색창에서 `담다 어웨어` 입력 후 선택<br>
 - IP에 추가할 `어웨어 장치의 IP주소`를 입력.
 
-[version-shield]: https://img.shields.io/badge/version-v1.2.3-orange.svg
+[version-shield]: https://img.shields.io/badge/version-v1.2.4-orange.svg
 [hacs-shield]: https://img.shields.io/badge/HACS-Custom-red.svg
