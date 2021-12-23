@@ -2,6 +2,7 @@
 from datetime import timedelta
 from homeassistant.core import callback
 from .device_damda_awair import DAwairDevice
+from homeassistant.components.sensor import SensorEntity
 from .api_damda_awair import get_api
 
 from .const import (
@@ -83,7 +84,7 @@ async def async_setup_entry(hass, config_entry, async_add_entities):
     async_add_entity()
 
 
-class DAwairSensor(DAwairDevice):
+class DAwairSensor(DAwairDevice, SensorEntity):
     """Representation of a Damda Awair sensor."""
 
     TYPE = SENSOR_DOMAIN
