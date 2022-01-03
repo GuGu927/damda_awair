@@ -54,6 +54,19 @@ def isnumber(value):
     )
 
 
+def isnumber(value):
+    """Determine string is number."""
+    return (
+        value is not None
+        and isinstance(value, (str, int, float))
+        and (
+            isinstance(value, str)
+            and (value.isnumeric() or value.isdigit())
+            or isfloat(value)
+        )
+    )
+
+
 async def async_setup_entry(hass, config_entry, async_add_entities):
     """Set up sensor for Damda Awair component."""
 
@@ -116,7 +129,7 @@ class DAwairSensor(DAwairDevice, SensorEntity):
     @property
     def state_class(self):
         """Type of this sensor state."""
-        return "measurement"
+        return "measurement" if isnumber(self.state) else None
 
     @property
     def should_poll(self) -> bool:
