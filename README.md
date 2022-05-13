@@ -15,8 +15,6 @@ Damda Awair Component
 
 <a href="https://paypal.me/rangee927" target="_blank"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_150x38.png" alt="PayPal"></a>
 
-<a href="https://www.buymeacoffee.com/rangee" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/white_img.png" alt="Buy Me A Coffee"></a>
-
 ## 버전 기록정보
 
 | 버전   | 날짜       | 내용                                        |
@@ -30,6 +28,7 @@ Damda Awair Component
 | v1.2.4 | 2021.12.15 | 2021.12 업데이트 대응2                      |
 | v1.2.5 | 2021.12.23 | 통계그래프 가능하게끔 수정                  |
 | v1.2.6 | 2022.01.04 | 오류 수정                                   |
+| v1.2.7 | 2022.05.12 | 2022.06 대응                                |
 
 <br/>
 
@@ -76,5 +75,5 @@ Damda Awair Component
 - 검색창에서 `담다 어웨어` 입력 후 선택<br>
 - IP에 추가할 `어웨어 장치의 IP주소`를 입력.
 
-[version-shield]: https://img.shields.io/badge/version-v1.2.6-orange.svg
+[version-shield]: https://img.shields.io/badge/version-v1.2.7-orange.svg
 [hacs-shield]: https://img.shields.io/badge/HACS-Custom-red.svg

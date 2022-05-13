@@ -81,14 +81,14 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
     async def async_step_zeroconf(self, discovery_info: DiscoveryInfoType):
         """Handle a flow initialized by zeroconf discovery."""
-        ip = discovery_info.get("host")
+        ip = discovery_info.host
         if ip:
             await self.get_awair(ip, False)
             return await self.async_step_discovery(discovery_info)
 
     async def async_step_dhcp(self, discovery_info: DiscoveryInfoType):
         """Handle a flow initialized by zeroconf discovery."""
-        ip = discovery_info.get("ip")
+        ip = discovery_info.ip
         if ip:
             await self.get_awair(ip, False)
             return await self.async_step_discovery(discovery_info)
