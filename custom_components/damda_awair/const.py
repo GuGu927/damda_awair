@@ -11,7 +11,7 @@ from homeassistant.const import (
     SOUND_PRESSURE_WEIGHTED_DBA,
 )
 
-VERSION = "1.2.7"
+VERSION = "1.2.8"
 BRAND = "Damda"
 NAME = "Damda Awair"
 NAME_KOR = "담다 어웨어"

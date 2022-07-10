@@ -95,6 +95,7 @@ class DamdaAwairAPI:
         self.loaded = {SENSOR_DOMAIN: False}
         self.listeners = []
         self._start = False
+        self._last_data = {}
 
         self.awair = {}
         self.awair_list = (
@@ -346,14 +347,16 @@ class DamdaAwairAPI:
 
     async def get_airdata(self, ip):
         """Get air data from ip."""
-        data = {}
+        data = self._last_data.copy()
         response = await self.hass.async_add_executor_job(
             requests.get, DATA_URL.format(ip)
         )
         try:
             data = response.json()
+            self._last_data = data
         except Exception as ex:
-            self.log(3, f"Error at get_airdata > {ip} > {ex}")
+            if "Expecting value" not in ex:
+                self.log(3, f"Error at get_airdata > {ip} > {ex}")
         return data
 
     async def get_awair(self, info={}):
