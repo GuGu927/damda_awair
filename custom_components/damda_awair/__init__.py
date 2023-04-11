@@ -34,7 +34,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         api = API(hass)
         hass.data[DOMAIN][API_NAME] = api
     api.set_entry(entry)
-    hass.config_entries.async_setup_platforms(entry, PLATFORMS)
+    hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     if hass.is_running:
         hass.async_add_job(api.update, True)
     else:
