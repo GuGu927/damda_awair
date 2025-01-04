@@ -2,16 +2,17 @@
 from homeassistant.components.sensor import DOMAIN as SENSOR_DOMAIN
 from homeassistant.components.sensor import SensorDeviceClass
 from homeassistant.const import (
+    Platform,
     CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
     CONCENTRATION_PARTS_PER_BILLION,
     CONCENTRATION_PARTS_PER_MILLION,
     LIGHT_LUX,
     PERCENTAGE,
-    TEMP_CELSIUS,
-    SOUND_PRESSURE_WEIGHTED_DBA,
+    UnitOfSoundPressure,
+    UnitOfTemperature,
 )
 
-VERSION = "1.2.9"
+VERSION = "1.3.0"
 BRAND = "Damda"
 NAME = "Damda Awair"
 NAME_KOR = "담다 어웨어"
@@ -20,7 +21,7 @@ MODEL = "damda_awair"
 MANUFACTURER = "Awair"
 API_NAME = DOMAIN + "_api"
 API_DEVICE = DOMAIN + "_device"
-PLATFORMS = [SENSOR_DOMAIN]
+PLATFORMS:list[Platform] = [Platform.SENSOR]
 
 DEVICE_DOMAIN = "domain"
 DEVICE_ENTITY = "entity"
@@ -118,7 +119,7 @@ AWAIR_ITEM = {
     "temp": [
         "temperature",
         "온도",
-        TEMP_CELSIUS,
+        UnitOfTemperature.CELSIUS,
         SENSOR_DOMAIN,
         "mdi:thermometer",
         SensorDeviceClass.TEMPERATURE,
@@ -172,7 +173,7 @@ AWAIR_ITEM = {
     "spl_a": [
         "noise",
         "소음",
-        SOUND_PRESSURE_WEIGHTED_DBA,
+        UnitOfSoundPressure.WEIGHTED_DECIBEL_A,
         SENSOR_DOMAIN,
         "mdi:volume-vibrate",
         None,
@@ -190,7 +191,7 @@ AWAIR_ITEM = {
     "dew_point": [
         "dew_point",
         "이슬점",
-        TEMP_CELSIUS,
+        UnitOfTemperature.CELSIUS,
         SENSOR_DOMAIN,
         "mdi:snowflake",
         SensorDeviceClass.TEMPERATURE,
