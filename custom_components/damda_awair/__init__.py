@@ -36,7 +36,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     api.set_entry(entry)
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     if hass.is_running:
-        hass.async_add_job(api.update, True)
+        hass.async_add_executor_job(api.update, True)
     else:
         hass.bus.async_listen_once(EVENT_HOMEASSISTANT_STARTED, api.update)
     return True

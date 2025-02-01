@@ -3,7 +3,6 @@
 Damda Awair Component
 
 ![HACS][hacs-shield]
-![Version v1.4][version-shield]
 
 문의 : 네이버 [HomeAssistant카페](https://cafe.naver.com/koreassistant)
 
@@ -32,6 +31,7 @@ Damda Awair Component
 | v1.2.8 | 2022.07.07 | 어웨어 오류 시 이전값 불러오게끔 수정       |
 | v1.2.9 | 2023.04.11 | deprecated 대응                             |
 | v1.3.0 | 2025.01.04 | deprecated 대응                             |
+| v1.3.1 | 2025.01.29 | deprecated 대응                             |
 
 <br/>
 

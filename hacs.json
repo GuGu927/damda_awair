@@ -1,6 +1,8 @@
 {
   "name": "[KR] Damda Awair",
   "country": "KR",
-  "domains": ["sensor"],
+  "domains": [
+    "sensor"
+  ],
   "render_readme": true
 }

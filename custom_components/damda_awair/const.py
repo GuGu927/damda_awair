@@ -12,7 +12,7 @@ from homeassistant.const import (
     UnitOfTemperature,
 )
 
-VERSION = "1.3.0"
+VERSION = "1.3.1"
 BRAND = "Damda"
 NAME = "Damda Awair"
 NAME_KOR = "담다 어웨어"
