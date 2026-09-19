@@ -32,6 +32,7 @@ Damda Awair Component
 | v1.2.9 | 2023.04.11 | deprecated 대응                             |
 | v1.3.0 | 2025.01.04 | deprecated 대응                             |
 | v1.3.1 | 2025.01.29 | deprecated 대응                             |
+| v1.3.2 | 2026.09.19 | 통합 로드 시 비동기 호출 오류 및 초기 갱신 누락 수정 |
 
 <br/>
 
@@ -78,5 +79,5 @@ Damda Awair Component
 - 검색창에서 `담다 어웨어` 입력 후 선택<br>
 - IP에 추가할 `어웨어 장치의 IP주소`를 입력.
 
-[version-shield]: https://img.shields.io/badge/version-v1.3.0-orange.svg
+[version-shield]: https://img.shields.io/badge/version-v1.3.2-orange.svg
 [hacs-shield]: https://img.shields.io/badge/HACS-Custom-red.svg
